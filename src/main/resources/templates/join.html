@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+    <form th:action="@{/join}" method="post">
+        <h1>Join us</h1>
+        <div class="form-group">
+            <label>Username
+                <input type="text" th:name="username" class="form-control" th:placeholder="username">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Password
+                <input type="password" th:name="password" class="form-control" th:placeholder="password">
+            </label>
+        </div>
+
+        <p>
+            Or <a th:href="@{/login}">login</a>
+        </p>
+
+        <input type="submit" class="btn btn-primary">
+    </form>
+
+</div>
+</body>
+</html>
